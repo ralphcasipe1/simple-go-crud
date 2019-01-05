@@ -1,0 +1,21 @@
+{{ define "Edit" }}
+    {{ template "Header" }}
+        {{ template "Menu" }}
+        <h2>Edit Name and Company</h2>
+        <form method="POST" action="update">
+        <label>Name</label>
+            <input type="hidden" name="contact_id" value="{{ .ContactID }}" />
+            
+            <input type="text" name="name" value="{{ .Name }}"/>
+            
+            <br />
+            
+            <label>Company</label>
+            <input type="text" name="company" value="{{ .Company }}"/>
+
+            <br />
+
+            <button type="submit">Udate</button>
+        </form>
+    {{ template "Footer" }}
+{{ end }}
